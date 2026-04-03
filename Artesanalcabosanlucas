@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya Artesanal | Cultura y Bienestar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&family=Bitter:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --azul: #1A3A8A;
+            --terracota: #965A38;
+            --fondo: #F9F7F2;
+            --blanco: #ffffff;
+            --texto: #2D2D2D;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: var(--blanco);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--azul);
+            font-weight: bold;
+            margin: 0 10px;
+            font-family: 'Bitter', serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .logo-img { max-width: 180px; margin-bottom: 10px; }
+
+        .nombre-maya {
+            font-family: 'Rochester', cursive;
+            font-size: 4.5em;
+            color: var(--terracota);
+            margin: 0;
+        }
+
+        .nombre-artesanal {
+            font-family: 'Bitter', serif;
+            font-size: 2.2em;
+            color: var(--terracota);
+            margin: -15px 0 20px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .intro-texto {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-style: italic;
+            color: var(--texto);
+            font-size: 1.1em;
+            line-height: 1.8;
+            border-left: 3px solid var(--azul);
+            padding-left: 20px;
+        }
+
+        section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+
+        .titulo-seccion {
+            font-family: 'Bitter', serif;
+            color: var(--azul);
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--terracota);
+            padding-bottom: 10px;
+        }
+
+        .sub-coleccion {
+            text-align: center;
+            font-family: 'Bitter', serif;
+            color: var(--terracota);
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+
+        .cuadricula {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tarjeta {
+            background: var(--blanco);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+            border: 1px solid #eee;
+        }
+
+        .tarjeta:hover { transform: translateY(-8px); }
+
+        .tarjeta img { width: 100%; height: 280px; object-fit: cover; }
+
+        .tarjeta h3 { font-family: 'Bitter', serif; color: var(--terracota); margin: 15px 0 5px; }
+
+        .tarjeta p { font-size: 0.9em; padding: 0 15px; color: #555; }
+
+        .sello { font-weight: bold; font-size: 0.75em; color: var(--azul); text-transform: uppercase; }
+
+        .contacto-bg {
+            background: var(--azul);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        form { max-width: 500px; margin: 30px auto 0; }
+
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; border: none; }
+
+        button {
+            background: var(--terracota);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        footer { text-align: center; padding: 40px; background: var(--fondo); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#jabones">Jabones</a>
+    <a href="#velas">Velas</a>
+    <a href="#crochet">Crochet</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<header>
+    <img src="img/lg1.jpeg" alt="Logo Maya Artesanal" class="logo-img">
+    <h1 class="nombre-maya">Maya</h1>
+    <h1 class="nombre-artesanal">Artesanal</h1>
+    
+    <div class="intro-texto">
+        Maya Artesanal: Cultura y bienestar en cada barra. 🌵🌊<br>
+        Fusionamos la tradición de la Talavera con la esencia pura de Baja California Sur. 
+        Jabones y velas hechos a mano con Vitamina E, diseñados para transformar tu rutina en un ritual mexicano.
+    </div>
+</header>
+
+<section id="jabones">
+    <h2 class="titulo-seccion">Jabones de Autor</h2>
+    
+    <h3 class="sub-coleccion">Colección: Botánica Ancestral</h3>
+    <div class="cuadricula">
+        <div class="tarjeta">
+            <img src="img/arroz-rosas.jpg" alt="Arroz y Rosas">
+            <h3>Arroz & Rosas</h3>
+            <p><strong>"Seda y Luz"</strong>. Polvo de arroz y aceite de rosas para una piel luminosa.</p>
+            <span class="sello">Vitamina E & Extracto Puro</span>
+        </div>
+        <div class="tarjeta">
+            <img src="img/avena-lavanda.jpg" alt="Avena y Lavanda">
+            <h3>Avena & Lavanda</h3>
+            <p><strong>"Calma y Exfoliación"</strong>. Un ritual de paz para eliminar impurezas.</p>
+            <span class="sello">Artesanal & Calmante</span>
+        </div>
+        <div class="tarjeta">
+            <img src="img/manzanilla.jpg" alt="Manzanilla">
+            <h3>Manzanilla & Manzanilla</h3>
+            <p><strong>"Paz Absoluta"</strong>. Doble infusión para las pieles más sensibles.</p>
+            <span class="sello">Hipoalergénico & Natural</span>
+        </div>
+    </div>
+
+    <h3 class="sub-coleccion" style="color: var(--azul); margin-top: 80px;">Línea: Talavera del Desierto</h3>
+    <div class="cuadricula">
+        <div class="tarjeta" style="border-top: 4px solid var(--azul);">
+            <img src="img/xocolatl.jpg" alt="Xocolatl">
+            <h3>Xocolatl "Ambá"</h3>
+            <p><strong>Cielo Cochimí</strong>. Cocoa orgánica y manteca de cacao antioxidante.</p>
+            <span class="sello">Vibe: Dulce y Místico</span>
+        </div>
+        <div class="tarjeta" style="border-top: 4px solid var(--azul);">
+            <img src="img/cafe-olla.jpg" alt="Café de Olla">
+            <h3>Café de Olla "Añi"</h3>
+            <p><strong>Dulce Tradición</strong>. Grano recién molido y canela energizante.</p>
+            <span class="sello">Vibe: Fuerza Mexicana</span>
+        </div>
+        <div class="tarjeta" style="border-top: 4px solid var(--azul);">
+            <img src="img/aloe-oasis.jpg" alt="Oasis">
+            <h3>Aloe "Oasis"</h3>
+            <p><strong>Sábila de la Baja</strong>. El frescor del desierto para tu piel.</p>
+            <span class="sello">Vibe: Frescura Pura</span>
+        </div>
+    </div>
+</section>
+
+<section id="velas">
+    <h2 class="titulo-seccion">Velas Aromáticas</h2>
+    <div class="cuadricula">
+        <div class="tarjeta">
+            <img src="img/vela1.jpg" alt="Vela">
+            <h3>Cera de Soya Natural</h3>
+            <p>Aromas que cuentan historias de México.</p>
+        </div>
+    </div>
+</section>
+
+<section id="crochet">
+    <h2 class="titulo-seccion">Detalles en Crochet</h2>
+    <div class="cuadricula">
+        <div class="tarjeta">
+            <img src="img/crochet1.jpg" alt="Tejido">
+            <h3>Accesorios Tejidos</h3>
+            <p>Diseños exclusivos hechos a mano punto por punto.</p>
+        </div>
+    </div>
+</section>
+
+<div id="contacto" class="contacto-bg">
+    <h2>Inicia tu Ritual</h2>
+    <p>Cuéntame qué producto te interesa o solicita pedidos personalizados.</p>
+    <form action="https://formspree.io/f/xldorrbr" method="POST">
+        <input type="text" name="Nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="_replyto" placeholder="Tu Correo" required>
+        <textarea name="Mensaje" rows="5" placeholder="¿Cuál es tu pedido?" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2026 Maya Artesanal. Hecho en Baja California Sur.</p>
+</footer>
+
+</body>
+</html>
