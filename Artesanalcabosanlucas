@@ -180,7 +180,7 @@
     <h3 class="sub-coleccion">Colección: Botánica Ancestral</h3>
     <div class="cuadricula">
         <div class="tarjeta">
-            <img src="img/arroz-rosas.jpg" alt="Arroz y Rosas">
+            <img src="img/arroz-rosas.jpeg" alt="Arroz y Rosas">
             <h3>Arroz & Rosas</h3>
             <p><strong>"Seda y Luz"</strong>. Polvo de arroz y aceite de rosas para una piel luminosa.</p>
             <span class="sello">Vitamina E & Extracto Puro</span>
@@ -202,13 +202,13 @@
     <h3 class="sub-coleccion" style="color: var(--azul); margin-top: 80px;">Línea: Talavera del Desierto</h3>
     <div class="cuadricula">
         <div class="tarjeta" style="border-top: 4px solid var(--azul);">
-            <img src="img/xocolatl.jpg" alt="Xocolatl">
+            <img src="img/xocolatl.jpeg" alt="Xocolatl">
             <h3>Xocolatl "Ambá"</h3>
             <p><strong>Cielo Cochimí</strong>. Cocoa orgánica y manteca de cacao antioxidante.</p>
             <span class="sello">Vibe: Dulce y Místico</span>
         </div>
         <div class="tarjeta" style="border-top: 4px solid var(--azul);">
-            <img src="img/cafe-olla.jpg" alt="Café de Olla">
+            <img src="img/cafe-olla.png" alt="Café de Olla">
             <h3>Café de Olla "Añi"</h3>
             <p><strong>Dulce Tradición</strong>. Grano recién molido y canela energizante.</p>
             <span class="sello">Vibe: Fuerza Mexicana</span>
