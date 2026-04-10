@@ -1,78 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-    <style>
-  /* Paleta de colores basada en el logo */
-:root {
-    --azul-talavera: #1A4789;
-    --cafe-maya: #A66B44;
-    --beige-fondo: #F9F7F0;
-    --texto-oscuro: #333333;
-}
-
-/* Títulos de las líneas (Talavera y Botánica) */
-.titulo-linea {
-    text-align: center;
-    font-family: 'Georgia', serif;
-    color: var(--azul-talavera); /* Azul del logo */
-    margin: 40px 0 20px 0;
-    font-size: 2.2rem;
-    border-bottom: 3px solid var(--cafe-maya); /* Línea café debajo */
-    display: block;
-    padding-bottom: 10px;
-}
-
-/* Tarjeta del jabón */
-.jabon-card {
-    background-color: white; /* Blanco limpio para resaltar */
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(26, 71, 137, 0.1); /* Sombra sutil azulada */
-    transition: transform 0.3s ease;
-}
-
-/* Título del Jabón */
-.jabon-card h3 {
-    color: var(--cafe-maya); /* Café de la palabra Maya */
-    font-size: 1.4rem;
-    margin-top: 15px;
-}
-
-/* Eslogan (Frase corta) */
-.eslogan {
-    font-style: italic;
-    color: var(--azul-talavera); /* Azul para resaltar la frescura */
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-/* Descripción */
-.jabon-descripcion {
-    font-size: 0.95rem;
-    color: var(--texto-oscuro);
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Recuadro "Ideal para" */
-.ideal-para {
-    font-size: 0.85rem;
-    background-color: var(--beige-fondo); /* Fondo cremita del logo */
-    padding: 8px;
-    border-radius: 5px;
-    color: var(--cafe-maya);
-    border: 1px dashed var(--cafe-maya);
-}
-
-/* Separador entre secciones */
-.separador {
-    border: 0;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--azul-talavera), transparent);
-    margin: 60px 0;
-}
-        </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,24 +7,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Rochester&family=Bitter:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
+        /* VARIABLES DE COLOR (TU LOGO) */
         :root {
-            --azul: #1A3A8A;
-            --terracota: #965A38;
-            --fondo: #F9F7F2;
+            --azul-talavera: #1A4789;
+            --cafe-maya: #A66B44;
+            --beige-fondo: #F9F7F0;
             --blanco: #ffffff;
-            --texto: #2D2D2D;
+            --texto-oscuro: #333333;
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: var(--fondo);
-            color: var(--texto);
+            background-color: var(--beige-fondo);
+            color: var(--texto-oscuro);
             margin: 0;
             line-height: 1.6;
         }
 
+        /* NAVEGACIÓN */
         nav {
             background: var(--blanco);
             padding: 15px;
@@ -110,7 +39,7 @@
 
         nav a {
             text-decoration: none;
-            color: var(--azul);
+            color: var(--azul-talavera);
             font-weight: bold;
             margin: 0 10px;
             font-family: 'Bitter', serif;
@@ -118,24 +47,25 @@
             text-transform: uppercase;
         }
 
+        /* HEADER */
         header {
             text-align: center;
             padding: 60px 20px 40px;
         }
 
-        .logo-img { max-width: 180px; margin-bottom: 10px; }
+        .logo-img { max-width: 180px; margin-bottom: 10px; border-radius: 50%; }
 
         .nombre-maya {
             font-family: 'Rochester', cursive;
             font-size: 4.5em;
-            color: var(--terracota);
+            color: var(--cafe-maya);
             margin: 0;
         }
 
         .nombre-artesanal {
             font-family: 'Bitter', serif;
             font-size: 2.2em;
-            color: var(--terracota);
+            color: var(--cafe-maya);
             margin: -15px 0 20px;
             letter-spacing: 4px;
             text-transform: uppercase;
@@ -145,144 +75,144 @@
             max-width: 700px;
             margin: 0 auto 40px;
             font-style: italic;
-            color: var(--texto);
+            color: var(--texto-oscuro);
             font-size: 1.1em;
             line-height: 1.8;
-            border-left: 3px solid var(--azul);
+            border-left: 3px solid var(--azul-talavera);
             padding-left: 20px;
         }
 
         section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
 
-        .titulo-seccion {
-            font-family: 'Bitter', serif;
-            color: var(--azul);
+        /* TÍTULOS Y LÍNEAS DE PRODUCTOS */
+        .titulo-linea {
             text-align: center;
-            font-size: 2.2em;
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--terracota);
+            font-family: 'Bitter', serif;
+            color: var(--azul-talavera);
+            margin: 40px 0 20px 0;
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--cafe-maya);
+            display: block;
             padding-bottom: 10px;
         }
 
-        .sub-coleccion {
-            text-align: center;
-            font-family: 'Bitter', serif;
-            color: var(--terracota);
-            margin-top: 40px;
-            font-size: 1.5em;
-        }
-
-        .cuadricula {
+        .contenedor-jabones {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
 
-        .tarjeta {
-            background: var(--blanco);
+        .jabon-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(26, 71, 137, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .jabon-card:hover { transform: translateY(-8px); }
+
+        .jabon-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+
+        .jabon-card h3 { color: var(--cafe-maya); font-size: 1.4rem; margin-top: 15px; }
+
+        .eslogan { font-style: italic; color: var(--azul-talavera); font-weight: 500; margin: 5px 0; }
+
+        .jabon-descripcion { font-size: 0.95rem; color: #555; line-height: 1.6; margin-bottom: 15px; }
+
+        .ideal-para {
+            font-size: 0.85rem;
+            background-color: var(--beige-fondo);
+            padding: 8px;
+            border-radius: 5px;
+            color: var(--cafe-maya);
+            border: 1px dashed var(--cafe-maya);
+        }
+
+        .separador {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--azul-talavera), transparent);
+            margin: 60px 0;
+        }
+
+        /* CALCULADORA CICLOS DE LUZ */
+        .calculadora-contenedor {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
             border-radius: 20px;
-            overflow: hidden;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
-            padding-bottom: 20px;
-            border: 1px solid #eee;
+            border: 2px solid var(--azul-talavera);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .tarjeta:hover { transform: translateY(-8px); }
-
-        .tarjeta img { width: 100%; height: 280px; object-fit: cover; }
-
-        .tarjeta h3 { font-family: 'Bitter', serif; color: var(--terracota); margin: 15px 0 5px; }
-
-        .tarjeta p { font-size: 0.9em; padding: 0 15px; color: #555; }
-
-        .sello { font-weight: bold; font-size: 0.75em; color: var(--azul); text-transform: uppercase; }
-
-        .contacto-bg {
-            background: var(--azul);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        form { max-width: 500px; margin: 30px auto 0; }
-
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; border: none; }
-
-        button {
-            background: var(--terracota);
-            color: white;
-            padding: 18px;
-            border: none;
+        .formulario-ciclo input {
+            padding: 12px;
+            border: 1px solid var(--azul-talavera);
             border-radius: 8px;
-            width: 100%;
-            font-weight: bold;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .btn-luz {
+            background-color: var(--azul-talavera);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
+            font-weight: bold;
             text-transform: uppercase;
         }
 
-        footer { text-align: center; padding: 40px; background: var(--fondo); }
+        .resultado-caja {
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 2px solid var(--cafe-maya);
+            animation: aparecer 0.8s ease;
+        }
+
+        .circulo-numero {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background-color: var(--azul-talavera);
+            color: white;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* CONTACTO Y OTROS */
+        .contacto-bg { background: var(--azul-talavera); color: white; padding: 80px 20px; text-align: center; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 8px; border: none; }
+        button[type="submit"] { background: var(--cafe-maya); color: white; padding: 18px; border: none; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        footer { text-align: center; padding: 40px; background: var(--beige-fondo); }
+
+        /* REUTILIZABLES */
+        .cuadricula { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px; }
+        .tarjeta { background: var(--blanco); border-radius: 20px; overflow: hidden; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; padding-bottom: 20px; border: 1px solid #eee; }
+        .tarjeta img { width: 100%; height: 280px; object-fit: cover; }
     </style>
-</head
-    <script>
-function calcularCiclo() {
-    const inputFecha = document.getElementById('fechaNacimiento').value;
-    
-    if (!inputFecha) {
-        alert("Por favor, ingresa una fecha válida.");
-        return;
-    }
+</head>
 
-    // Obtenemos todos los dígitos de la fecha (ej: 1995-05-15 -> 19950515)
-    let digitos = inputFecha.replace(/-/g, '');
-    let suma = 0;
-
-    // Primera suma de todos los números
-    for (let d of digitos) {
-        suma += parseInt(d);
-    }
-
-    // Reducción a un solo dígito (mientras sea mayor a 9, se vuelve a sumar)
-    while (suma > 9) {
-        suma = suma.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
-    }
-
-    // Mostrar resultados y asignar mensajes
-    const caja = document.getElementById('resultadoCiclo');
-    const spanNumero = document.getElementById('numeroFinal');
-    const pMensaje = document.getElementById('mensajeCiclo');
-    const hNombre = document.getElementById('nombreCiclo');
-
-    caja.style.display = 'block';
-    spanNumero.innerText = suma;
-
-    // Contenido basado en tus ciclos
-    const guiaCiclos = {
-        1: { nombre: "Ciclo de Nuevos Comienzos", texto: "Es momento de la independencia y de sembrar proyectos con fuerza propia." },
-        2: { nombre: "Ciclo de Dualidad y Empatía", texto: "Tiempo de trabajar la paciencia, las relaciones y el equilibrio emocional." },
-        3: { nombre: "Ciclo de Expansión Creativa", texto: "La comunicación y la alegría fluyen. Expresa tu verdad sin miedo." },
-        4: { nombre: "Ciclo de Estructura", texto: "Enfoque en el orden, el trabajo constante y la construcción de bases sólidas." },
-        5: { nombre: "Ciclo de Libertad", texto: "Cambios inesperados y aventuras. Fluye con el movimiento de la vida." },
-        6: { nombre: "Ciclo de Armonía Social", texto: "Ideal para el cuidado del hogar, la familia y la responsabilidad amorosa." },
-        7: { nombre: "Ciclo de Sabiduría", texto: "Un tiempo de introspección, estudio y conexión espiritual profunda." },
-        8: { nombre: "Ciclo de Manifestación", texto: "Poder personal y resultados materiales. Cosecha lo que has trabajado." },
-        9: { nombre: "Ciclo de Cierre", texto: "Culminación y perdón. Limpia tu espacio para recibir el próximo gran ciclo." }
-    };
-
-    hNombre.innerText = guiaCiclos[suma].nombre;
-    pMensaje.innerText = guiaCiclos[suma].texto;
-    
-    // Desplazar la pantalla suavemente hacia el resultado
-    caja.scrollIntoView({ behavior: 'smooth' });
-}
-</script>
 <body>
 
 <nav>
     <a href="#jabones">Jabones</a>
     <a href="#velas">Velas</a>
+    <a href="#ciclos-luz">Ciclos de Luz</a>
     <a href="#crochet">Crochet</a>
     <a href="#contacto">Contacto</a>
 </nav>
@@ -300,244 +230,92 @@ function calcularCiclo() {
 </header>
 
 <section id="jabones">
-   <h2 class="titulo-linea">Línea Talavera del Desierto</h2>
-<div class="contenedor-jabones">
+    <h2 class="titulo-linea">Línea Talavera del Desierto</h2>
+    <div class="contenedor-jabones">
+        <div class="jabon-card">
+            <img src="img/aloe.jpg" alt="Aloe Oasis">
+            <h3>Aloe Oasis 🌵</h3>
+            <p class="eslogan">“Un respiro de frescura para tu piel.”</p>
+            <p class="jabon-descripcion">Siente la hidratación profunda del desierto. Combina la pureza del aloe vera con vitamina E para calmar y regenerar pieles cansadas.</p>
+            <p class="ideal-para"><strong>Ideal para:</strong> Pieles secas o sensibles.</p>
+        </div>
 
-    <div class="jabon-card">
-        <img src="ruta-aloe.jpg" alt="Aloe Oasis">
-        <h3>Aloe Oasis 🌵</h3>
-        <p class="eslogan">“Un respiro de frescura para tu piel.”</p>
-        <p class="jabon-descripcion">Siente la hidratación profunda del desierto. Combina la pureza del aloe vera con vitamina E para calmar y regenerar pieles cansadas.</p>
-        <p class="ideal-para"><strong>Ideal para:</strong> Pieles secas o sensibles.</p>
+        <div class="jabon-card">
+            <img src="img/chocolate.jpg" alt="Xocolatl Ambá">
+            <h3>Xocolatl Ambá 🍫</h3>
+            <p class="eslogan">“El placer ancestral del cacao en tu ducha.”</p>
+            <p class="jabon-descripcion">Delicia antioxidante con extracto de cacao. Mejora la elasticidad de la piel mientras su aroma dulce envuelve tus sentidos.</p>
+            <p class="ideal-para"><strong>Ideal para:</strong> Pieles que necesitan nutrición extra.</p>
+        </div>
+
+        <div class="jabon-card">
+            <img src="img/cafe.jpg" alt="Jabón de Olla">
+            <h3>Jabón de Olla - Añi ☕</h3>
+            <p class="eslogan">“Tradición y confort en cada barra.”</p>
+            <p class="jabon-descripcion">Homenaje a nuestras raíces con notas de café y especias. Tonifica la piel dejándola firme y con un aroma acogedor.</p>
+            <p class="ideal-para"><strong>Ideal para:</strong> Un baño revitalizante por las mañanas.</p>
+        </div>
     </div>
 
-    <div class="jabon-card">
-        <img src="ruta-chocolate.jpg" alt="Xocolatl Ambá">
-        <h3>Xocolatl Ambá 🍫</h3>
-        <p class="eslogan">“El placer ancestral del cacao en tu ducha.”</p>
-        <p class="jabon-descripcion">Delicia antioxidante con extracto de cacao. Mejora la elasticidad de la piel mientras su aroma dulce envuelve tus sentidos.</p>
-        <p class="ideal-para"><strong>Ideal para:</strong> Pieles que necesitan nutrición extra.</p>
+    <hr class="separador">
+
+    <h2 class="titulo-linea">Línea Botánica Ancestral</h2>
+    <div class="contenedor-jabones">
+        <div class="jabon-card">
+            <img src="img/avena.jpg" alt="Calma y Exfoliación">
+            <h3>Calma y Exfoliación (Avena) 🌾</h3>
+            <p class="eslogan">“El equilibrio perfecto entre limpieza y cuidado.”</p>
+            <p class="jabon-descripcion">Exfoliación mecánica suave que elimina células muertas. Calma picazón y rojeces gracias a la Vitamina E.</p>
+            <p class="ideal-para"><strong>Ideal para:</strong> Pieles delicadas o con dermatitis.</p>
+        </div>
+
+        <div class="jabon-card">
+            <img src="img/arroz.jpg" alt="Jabón de Arroz">
+            <h3>Seda y Luz (Arroz) 🌊</h3>
+            <p class="eslogan">“Brillo propio y suavidad infinita.”</p>
+            <p class="jabon-descripcion">Limpia suavemente sin retirar aceites naturales. El arroz aporta luminosidad y un acabado tan suave como la seda.</p>
+            <p class="ideal-para"><strong>Ideal para:</strong> Todo tipo de piel que busque un brillo saludable.</p>
+        </div>
+
+        <div class="jabon-card">
+            <img src="img/manzanilla.jpg" alt="Jabón de Manzanilla">
+            <h3>Paz Absoluta (Manzanilla) 🌿</h3>
+            <p class="eslogan">“Tu ritual de calma al final del día.”</p>
+            <p class="jabon-descripcion">Formulado con partículas botánicas de manzanilla que relajan la piel. Reduce el estrés convirtiendo tu baño en un santuario.</p>
+            <p class="ideal-para"><strong>Ideal para:</strong> El baño nocturno antes de descansar.</p>
+        </div>
     </div>
-
-    <div class="jabon-card">
-        <img src="ruta-cafe.jpg" alt="Jabón de Olla">
-        <h3>Jabón de Olla - Añi ☕</h3>
-        <p class="eslogan">“Tradición y confort en cada barra.”</p>
-        <p class="jabon-descripcion">Homenaje a nuestras raíces con notas de café y especias. Tonifica la piel dejándola firme y con un aroma que te hará sentir en casa.</p>
-        <p class="ideal-para"><strong>Ideal para:</strong> Un baño revitalizante por las mañanas.</p>
-    </div>
-</div>
-
-<hr class="separador">
-
-<h2 class="titulo-linea">Línea Botánica Ancestral</h2>
-<div class="contenedor-jabones">
-
-    <div class="jabon-card">
-        <img src="ruta-avena.jpg" alt="Calma y Exfoliación">
-        <h3>Calma y Exfoliación (Avena) 🌾</h3>
-        <p class="eslogan">“El equilibrio perfecto entre limpieza y cuidado.”</p>
-        <p class="jabon-descripcion">Exfoliación mecánica suave que elimina células muertas. Calma picazón y rojeces gracias a la Vitamina E.</p>
-        <p class="ideal-para"><strong>Ideal para:</strong> Pieles delicadas o con dermatitis.</p>
-    </div>
-
-    <div class="jabon-card">
-        <img src="ruta-arroz.jpg" alt="Jabón de Arroz">
-        <h3>Seda y Luz (Arroz) 🌊</h3>
-        <p class="eslogan">“Brillo propio y suavidad infinita.”</p>
-        <p class="jabon-descripcion">Limpia suavemente sin retirar aceites naturales. El arroz aporta luminosidad y un acabado tan suave como la seda.</p>
-        <p class="ideal-para"><strong>Ideal para:</strong> Todo tipo de piel que busque un brillo saludable.</p>
-    </div>
-
-    <div class="jabon-card">
-        <img src="ruta-manzanilla.jpg" alt="Jabón de Manzanilla">
-        <h3>Paz Absoluta (Manzanilla) 🌿</h3>
-        <p class="eslogan">“Tu ritual de calma al final del día.”</p>
-        <p class="jabon-descripcion">Formulado con partículas botánicas de manzanilla que relajan la piel. Reduce el estrés convirtiendo tu baño en un santuario.</p>
-        <p class="ideal-para"><strong>Ideal para:</strong> El baño nocturno antes de descansar.</p>
-    </div>
-</div>
 </section>
 
-<section id="velas">
-    <h2 class="titulo-seccion">Velas Aromáticas</h2>
-
-    <h3 class="sub-coleccion">Línea: Tierras de Aquí</h3>
-    <p style="text-align:center; font-style: italic;">"Mística y Sagrada"</p>
-    <div class="cuadricula">
-        <div class="tarjeta">
-            <img src="img/vela-mirra.png" alt="Vela Mirra">
-            <h3>Mirra</h3>
-            <p>Aroma ancestral para meditación.</p>
-        </div>
-        <div class="tarjeta">
-            <img src="img/vela-copal.png" alt="Vela Copal">
-            <h3>Copal</h3>
-            <p>Purificación y conexión mística.</p>
-        </div>
-        <div class="tarjeta">
-            <img src="img/vela-incienso.png" alt="Vela Incienso">
-            <h3>Incienso</h3>
-            <p>Paz y armonía en tu espacio.</p>
-        </div>
-    </div>
-
-    <h3 class="sub-coleccion" style="margin-top: 60px;">Línea: Raíces y Tradición</h3>
-    <p style="text-align:center; font-style: italic;">"Nuestra Cultura Festiva"</p>
-    <div class="cuadricula">
-        <div class="tarjeta">
-            <img src="img/vela-cempasuchil.png" alt="Vela Cempasúchil">
-            <h3>Flor de Cempasúchil</h3>
-            <p>El aroma de la tradición.</p>
-        </div>
-        <div class="tarjeta">
-            <img src="img/vela-panmuerto.png" alt="Vela Pan de Muerto">
-            <h3>Pan de Muerto</h3>
-            <p>Dulce recuerdo de hogar.</p>
-        </div>
-        <div class="tarjeta">
-            <img src="img/vela-calabaza.png" alt="Vela Calabaza">
-            <h3>Dulce de Calabaza</h3>
-            <p>Calidez y tradición otoñal.</p>
-        </div>
-    </div>
-
-    <h3 class="sub-coleccion" style="color: var(--azul); margin-top: 60px;">Línea: Cabo Baja</h3>
-    <p style="text-align:center; font-style: italic;">"La esencia de la Baja"</p>
-    <div class="cuadricula">
-        <div class="tarjeta" style="border-top: 4px solid var(--azul);">
-            <img src="img/vela-aloe.png" alt="Vela Aloe">
-            <h3>Aloe Vera</h3>
-            <p>Frescura pura del desierto.</p>
-        </div>
-        <div class="tarjeta" style="border-top: 4px solid var(--azul);">
-            <img src="img/vela-brisa.png" alt="Vela Brisa">
-            <h3>Brisa del Mar</h3>
-            <p>El océano en tu hogar.</p>
-        </div>
-        <div class="tarjeta" style="border-top: 4px solid var(--azul);">
-            <img src="img/vela-pitahaya.png" alt="Vela Pitahaya">
-            <h3>Pitahaya y Coco</h3>
-            <p>Dulzor tropical de BCS.</p>
-        </div>
-    </div>
-
-   <section id="ciclos-luz" class="seccion-interactiva">
+<section id="ciclos-luz">
     <div class="calculadora-contenedor">
-        <h2 class="titulo-linea">Encuentra tu Número de Ciclo 🕯️</h2>
-        <p class="instrucciones">Suma tu día, mes y año de nacimiento para descubrir tu energía actual.</p>
-        
+        <h2 class="titulo-linea" style="border-bottom:none;">Calcula tu Ciclo de Luz 🕯️</h2>
+        <p>Tu fecha de nacimiento revela la energía que te acompaña hoy.</p>
         <div class="formulario-ciclo">
-            <label for="fechaNacimiento">Selecciona tu fecha de nacimiento:</label>
             <input type="date" id="fechaNacimiento">
             <button onclick="calcularCiclo()" class="btn-luz">Revelar mi Ciclo</button>
         </div>
-
         <div id="resultadoCiclo" class="resultado-caja" style="display: none;">
-            <div class="circulo-numero">
-                <span id="numeroFinal"></span>
-            </div>
-            <h4 id="nombreCiclo"></h4>
+            <div class="circulo-numero"><span id="numeroFinal"></span></div>
+            <h4 id="nombreCiclo" style="color:var(--azul-talavera); font-size:1.5rem;"></h4>
             <p id="mensajeCiclo"></p>
         </div>
     </div>
 </section>
 
-    <div style="max-width: 750px; margin: 30px auto; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 30px;">
-        <p style="line-height: 1.8; font-size: 1.1em;">
-            Una fragancia exclusiva que fusiona el <strong>Copal Sagrado</strong> (limpieza) con la calidez del <strong>Dulce de Calabaza</strong> (abundancia). 
-            Diseñada para acompañar tu proceso personal según tu vibración numérica.
-        </p>
-        <p style="color: var(--terracota); font-weight: bold;">¿Cómo calcular tu número? <br> <span style="font-weight: normal; color: #555; font-size: 0.9em;">Suma los dígitos de tu fecha de nacimiento hasta llegar a un solo número (del 1 al 9).</span></p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 40px;">
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">1</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Inicios:</strong> Liderazgo, independencia y nuevas oportunidades.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">2</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Unión:</strong> Dualidad, equilibrio, paciencia y diplomacia.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">3</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Expansión:</strong> Creatividad, alegría y comunicación fluida.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">4</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Estructura:</strong> Trabajo, orden, cimientos y estabilidad.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">5</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Cambio:</strong> Libertad, aventura y romper estructuras.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">6</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Armonía:</strong> Amor, familia, hogar y responsabilidad.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">7</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Sabiduría:</strong> Espiritualidad, análisis e introspección.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">8</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Poder:</strong> Abundancia material, éxito y justicia.</p>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #eee;">
-            <h4 style="color: var(--azul); margin: 0; font-size: 1.5em;">9</h4>
-            <p style="font-size: 0.85em; margin: 5px 0;"><strong>Cierre:</strong> Altruismo, compasión y fin de ciclos.</p>
-        </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="#contacto" style="background: var(--azul); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; text-transform: uppercase; font-size: 0.9em; box-shadow: 0 5px 15px rgba(26, 58, 138, 0.2);">
-            Pide tu número aquí
-        </a>
-    </div>
-</div>
-    <div style="background-color: var(--blanco); padding: 40px; border-radius: 25px; margin-top: 80px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px dashed var(--terracota);">
-        <h2 style="font-family: 'Bitter', serif; color: var(--terracota); text-align: center; margin-top: 0;">Velas para Eventos</h2>
-        <p style="text-align:center;">Hacemos que tus momentos especiales sean inolvidables. Personalizamos etiquetas y aromas para bodas, bautizos y celebraciones.</p>
-        
-        <div class="cuadricula" style="margin-top: 30px;">
-            <div class="tarjeta"><img src="img/evento1.jpeg" alt="Boda"><p>Recuerdos para Bodas</p></div>
-            <div class="tarjeta"><img src="img/evento2.jpeg" alt="Bautizo"><p>Bautizos y Baby Showers</p></div>
-            <div class="tarjeta"><img src="img/evento4.png" alt="Corporativo"><p>Regalos Corporativos</p></div>
-            <div class="tarjeta"><img src="img/evento3.jpeg" alt="Personalizado"><p>Diseños a medida</p></div>
-        </div>
-    </div>
-</section>
-
 <section id="crochet">
-    <h2 class="titulo-seccion">Tejidos en Crochet</h2>
-    
-    <div class="cuadricula" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
-        
-        <div class="tarjeta" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-            <img src="img/crochet1.jpeg" alt="Spiderman Crochet" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-            <h3 style="font-size: 1.1em; margin-top: 10px;">Spiderman Amigurumi</h3>
-            <p style="font-size: 0.85em;">Hecho a mano punto por punto.</p>
+    <h2 class="titulo-linea">Tejidos en Crochet</h2>
+    <div class="cuadricula">
+        <div class="tarjeta">
+            <img src="img/crochet1.jpeg" alt="Spiderman">
+            <h3>Spiderman Amigurumi</h3>
+            <p>Hecho a mano punto por punto.</p>
         </div>
-
-        <div class="tarjeta" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-            <img src="img/crochet2.jpeg" alt="Guardian MineCraft" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-            <h3 style="font-size: 1.1em; margin-top: 10px;">Guardian MineCraft Figuras</h3>
-            <p style="font-size: 0.85em;">Diseños personalizados y únicos.</p>
+        <div class="tarjeta">
+            <img src="img/crochet3.jpeg" alt="Bolsa">
+            <h3>Bolsa Granny de Corazón</h3>
+            <p>Detalles únicos hechos con amor.</p>
         </div>
-
-        <div class="tarjeta" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-            <img src="img/crochet3.jpeg" alt="Bolsa de Granny Corazón" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-            <h3 style="font-size: 1.1em; margin-top: 10px;">Bolsa Granny de Corazón</h3>
-            <p style="font-size: 0.85em;">Detalles únicos, cada granny hecho a mano.</p>
-        </div>
-
-        <div class="tarjeta" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-            <img src="img/crochet4.jpeg" alt="Porta Vasos" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-            <h3 style="font-size: 1.1em; margin-top: 10px;">Porta Vasos con Flores</h3>
-            <p style="font-size: 0.85em;">Hecho con hilos de alta calidad.</p>
-        </div>
-        
     </div>
 </section>
 
@@ -554,13 +332,15 @@ function calcularCiclo() {
 
 <footer>
     <p>&copy; 2026 Maya Artesanal. Hecho a mano con amor en Baja California Sur.</p>
-    <div class="links-sociales">
-        <a href="https://www.instagram.com/mayaa.rtesanal?igsh=MXF4YWJ6eTNrcW1veA==" target="_blank" style="color: var(--terracota); text-decoration: none; font-weight: bold; margin: 0 15px; border: 1px solid var(--terracota); padding: 8px 15px; border-radius: 20px;">
-            Instagram
-        </a>
-        
-        <a href="https://www.facebook.com/share/1LN7AmjqLP/" target="_blank" style="color: var(--azul); text-decoration: none; font-weight: bold; margin: 0 15px; border: 1px solid var(--azul); padding: 8px 15px; border-radius: 20px;">
-            Facebook
-        </a>
+    <div>
+        <a href="https://www.instagram.com/mayaa.rtesanal" target="_blank" style="color: var(--cafe-maya); margin-right: 15px;">Instagram</a>
+        <a href="https://www.facebook.com/share/1LN7AmjqLP/" target="_blank" style="color: var(--azul-talavera);">Facebook</a>
     </div>
 </footer>
+
+<script>
+function calcularCiclo() {
+    const inputFecha = document.getElementById('fechaNacimiento').value;
+    if (!inputFecha) { alert("Por favor, ingresa una fecha válida."); return; }
+
+    let digitos
