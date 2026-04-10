@@ -7,80 +7,105 @@
     <link href="https://fonts.googleapis.com/css2?family=Rochester&family=Bitter:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --azul-talavera: #1A4789;
-            --cafe-maya: #A66B44;
-            --beige-fondo: #F9F7F0;
-            --blanco: #ffffff;
-            --texto-oscuro: #333333;
-        }
+    :root {
+        --azul-talavera: #1A4789;
+        --cafe-maya: #A66B44;
+        --beige-fondo: #F9F7F0;
+        --blanco: #ffffff;
+        --texto-oscuro: #333333;
+    }
 
-        * { box-sizing: border-box; scroll-behavior: smooth; }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--beige-fondo);
-            color: var(--texto-oscuro);
-            margin: 0;
-            line-height: 1.6;
-        }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: var(--beige-fondo);
+        color: var(--texto-oscuro);
+        margin: 0;
+        line-height: 1.6;
+    }
 
-        nav {
-            background: var(--blanco);
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+    nav {
+        background: var(--blanco);
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--azul-talavera);
-            font-weight: bold;
-            margin: 0 10px;
-            font-family: 'Bitter', serif;
-            font-size: 0.85em;
-            text-transform: uppercase;
-        }
+    nav a {
+        text-decoration: none;
+        color: var(--azul-talavera);
+        font-weight: bold;
+        margin: 0 10px;
+        font-family: 'Bitter', serif;
+        font-size: 0.85em;
+        text-transform: uppercase;
+    }
 
-        header { text-align: center; padding: 60px 20px 40px; }
-        .logo-img { max-width: 180px; margin-bottom: 10px; border-radius: 50%; }
-        .nombre-maya { font-family: 'Rochester', cursive; font-size: 4.5em; color: var(--cafe-maya); margin: 0; }
-        .nombre-artesanal { font-family: 'Bitter', serif; font-size: 2.2em; color: var(--cafe-maya); margin: -15px 0 20px; letter-spacing: 4px; text-transform: uppercase; }
+    /* LOGO MÁS GRANDE */
+    header { text-align: center; padding: 60px 20px 40px; }
+    .logo-img { 
+        max-width: 250px; /* Tamaño ajustado */
+        width: 100%;
+        margin-bottom: 15px; 
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nombre-maya { font-family: 'Rochester', cursive; font-size: 4.5em; color: var(--cafe-maya); margin: 0; }
+    .nombre-artesanal { font-family: 'Bitter', serif; font-size: 2.2em; color: var(--cafe-maya); margin: -15px 0 20px; letter-spacing: 4px; text-transform: uppercase; }
 
-        .intro-texto {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-style: italic;
-            border-left: 3px solid var(--azul-talavera);
-            padding-left: 20px;
-        }
+    section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .titulo-linea { text-align: center; font-family: 'Bitter', serif; color: var(--azul-talavera); margin: 40px 0 20px; font-size: 2.2rem; border-bottom: 3px solid var(--cafe-maya); padding-bottom: 10px; }
+    .sub-coleccion { text-align: center; font-family: 'Bitter', serif; color: var(--cafe-maya); margin-top: 40px; font-size: 1.8em; }
 
-        section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-        .titulo-linea { text-align: center; font-family: 'Bitter', serif; color: var(--azul-talavera); margin: 40px 0 20px; font-size: 2.2rem; border-bottom: 3px solid var(--cafe-maya); padding-bottom: 10px; }
-        .sub-coleccion { text-align: center; font-family: 'Bitter', serif; color: var(--cafe-maya); margin-top: 40px; font-size: 1.8em; }
+    /* TARJETAS E IMÁGENES 1:1 */
+    .cuadricula { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+    .tarjeta { 
+        background: var(--blanco); 
+        border-radius: 20px; 
+        overflow: hidden; 
+        transition: 0.3s; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+        text-align: center; 
+        padding-bottom: 20px; 
+        border: 1px solid #eee; 
+    }
 
-        /* Tarjetas de Productos */
-        .cuadricula { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
-        .tarjeta { background: var(--blanco); border-radius: 20px; overflow: hidden; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; padding-bottom: 20px; border: 1px solid #eee; }
-        .tarjeta:hover { transform: translateY(-8px); }
-        .tarjeta img { width: 100%; height: 280px; object-fit: cover; }
-        .eslogan { font-style: italic; color: var(--azul-talavera); font-weight: 500; margin: 5px 10px; font-size: 0.9em; }
-        .ideal-para { font-size: 0.85rem; background-color: var(--beige-fondo); padding: 8px; border-radius: 5px; color: var(--cafe-maya); border: 1px dashed var(--cafe-maya); margin: 10px; }
+    .tarjeta img { 
+        width: 100%; 
+        aspect-ratio: 1 / 1; /* Esto hace que la imagen sea cuadrada */
+        object-fit: cover; /* Asegura que la imagen llene el cuadrado sin estirarse */
+        transition: 0.4s ease; /* Para el efecto de brillo suave */
+    }
 
-        /* Calculadora */
-        .calculadora-contenedor { max-width: 600px; margin: 50px auto; padding: 30px; background-color: white; border-radius: 20px; text-align: center; border: 2px solid var(--azul-talavera); }
-        .btn-luz { background: var(--azul-talavera); color: white; padding: 12px 25px; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        .resultado-caja { margin-top: 30px; padding: 20px; border-top: 2px solid var(--cafe-maya); }
-        .circulo-numero { width: 60px; height: 60px; line-height: 60px; background: var(--azul-talavera); color: white; border-radius: 50%; margin: 0 auto 10px; font-size: 1.8em; font-weight: bold; }
+    /* EFECTO BRILLO AL PASAR EL MOUSE */
+    .tarjeta:hover img { 
+        filter: brightness(1.1) saturate(1.1); /* Brillo y un poco más de color */
+        transform: scale(1.03); /* Un pequeño zoom */
+    }
+    
+    .tarjeta:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(26, 71, 137, 0.15); }
 
-        /* Formulario y Footer */
-        .contacto-bg { background: var(--azul-talavera); color: white; padding: 80px 20px; text-align: center; }
-        button[type="submit"] { background: var(--cafe-maya); color: white; padding: 18px; border: none; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
-        footer { text-align: center; padding: 40px; }
-    </style>
+    .eslogan { font-style: italic; color: var(--azul-talavera); font-weight: 500; margin: 5px 10px; font-size: 0.9em; }
+    .ideal-para { font-size: 0.85rem; background-color: var(--beige-fondo); padding: 8px; border-radius: 5px; color: var(--cafe-maya); border: 1px dashed var(--cafe-maya); margin: 10px; }
+
+    /* CALCULADORA */
+    .calculadora-contenedor { max-width: 700px; margin: 50px auto; padding: 30px; background-color: white; border-radius: 20px; text-align: center; border: 2px solid var(--azul-talavera); }
+    .mezcla-info { background: var(--beige-fondo); padding: 20px; border-radius: 15px; margin-bottom: 25px; border: 1px solid var(--cafe-maya); }
+    .decreto-box { font-style: italic; color: var(--azul-talavera); font-weight: bold; margin-top: 15px; padding: 10px; border-top: 1px solid #eee; }
+    .btn-luz { background: var(--azul-talavera); color: white; padding: 12px 25px; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+    
+    .resultado-caja { margin-top: 30px; padding: 20px; border-top: 2px solid var(--cafe-maya); background: #fffcf5; border-radius: 0 0 20px 20px; }
+    .circulo-numero { width: 70px; height: 70px; line-height: 70px; background: var(--azul-talavera); color: white; border-radius: 50%; margin: 0 auto 10px; font-size: 2em; font-weight: bold; }
+
+    .contacto-bg { background: var(--azul-talavera); color: white; padding: 80px 20px; text-align: center; }
+    button[type="submit"] { background: var(--cafe-maya); color: white; padding: 18px; border: none; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
+    footer { text-align: center; padding: 40px; }
+</style>
 </head>
 
 <body>
@@ -97,7 +122,7 @@
     <img src="img/lg1.jpeg" alt="Logo Maya Artesanal" class="logo-img">
     <h1 class="nombre-maya">Maya</h1>
     <h1 class="nombre-artesanal">Artesanal</h1>
-    <div class="intro-texto">
+    <div class="intro-texto" style="margin: auto; max-width: 700px;">
         Cultura y bienestar en cada barra. 🌵🌊 Fusionamos la tradición de la Talavera con la esencia de BCS.
     </div>
 </header>
@@ -106,25 +131,25 @@
     <h2 class="titulo-linea">Línea Talavera del Desierto</h2>
     <div class="cuadricula">
         <div class="tarjeta">
-            <img src="img/aloe.jpg" alt="Aloe">
+            <img src="img/aloe.jpg" alt="Aloe Oasis">
             <h3>Aloe Oasis 🌵</h3>
             <p class="eslogan">“Un respiro de frescura para tu piel.”</p>
-            <p>Hidratación profunda con aloe vera y vitamina E.</p>
-            <p class="ideal-para">Pieles secas o sensibles.</p>
+            <p style="padding:0 15px;">Hidratación profunda con aloe vera y vitamina E.</p>
+            <p class="ideal-para">Ideal para: Pieles secas o sensibles.</p>
         </div>
         <div class="tarjeta">
             <img src="img/chocolate.jpg" alt="Cacao">
             <h3>Xocolatl Ambá 🍫</h3>
             <p class="eslogan">“El placer ancestral del cacao.”</p>
-            <p>Antioxidante natural que mejora la elasticidad.</p>
-            <p class="ideal-para">Pieles que necesitan nutrición.</p>
+            <p style="padding:0 15px;">Antioxidante natural que mejora la elasticidad.</p>
+            <p class="ideal-para">Ideal para: Pieles que necesitan nutrición.</p>
         </div>
         <div class="tarjeta">
             <img src="img/cafe.jpg" alt="Café">
             <h3>Jabón de Olla - Añi ☕</h3>
             <p class="eslogan">“Tradición y confort.”</p>
-            <p>Tonifica con notas de café y especias cálidas.</p>
-            <p class="ideal-para">Baño revitalizante matutino.</p>
+            <p style="padding:0 15px;">Tonifica con notas de café y especias cálidas.</p>
+            <p class="ideal-para">Ideal para: Baño revitalizante matutino.</p>
         </div>
     </div>
 
@@ -134,22 +159,22 @@
             <img src="img/avena.jpg" alt="Avena">
             <h3>Calma y Exfoliación 🌾</h3>
             <p class="eslogan">“Equilibrio y cuidado diario.”</p>
-            <p>Exfoliación suave que elimina células muertas.</p>
-            <p class="ideal-para">Pieles con dermatitis o delicadas.</p>
+            <p style="padding:0 15px;">Exfoliación suave que elimina células muertas.</p>
+            <p class="ideal-para">Ideal para: Pieles delicadas.</p>
         </div>
         <div class="tarjeta">
             <img src="img/arroz.jpg" alt="Arroz">
             <h3>Seda y Luz (Arroz) 🌊</h3>
             <p class="eslogan">“Brillo propio y suavidad.”</p>
-            <p>Limpia sin retirar aceites naturales. Brillo saludable.</p>
-            <p class="ideal-para">Todo tipo de piel.</p>
+            <p style="padding:0 15px;">Limpia sin retirar aceites naturales.</p>
+            <p class="ideal-para">Ideal para: Todo tipo de piel.</p>
         </div>
         <div class="tarjeta">
             <img src="img/manzanilla.jpg" alt="Manzanilla">
             <h3>Paz Absoluta 🌿</h3>
             <p class="eslogan">“Ritual de calma nocturna.”</p>
-            <p>Partículas botánicas que relajan y reducen estrés.</p>
-            <p class="ideal-para">Baño antes de descansar.</p>
+            <p style="padding:0 15px;">Partículas botánicas que relajan y reducen estrés.</p>
+            <p class="ideal-para">Ideal para: El baño nocturno.</p>
         </div>
     </div>
 </section>
@@ -159,48 +184,56 @@
     
     <h3 class="sub-coleccion">Tierras de Aquí</h3>
     <div class="cuadricula">
-        <div class="tarjeta"><h3>Mirra</h3><p>Mística y meditación.</p></div>
-        <div class="tarjeta"><h3>Copal</h3><p>Purificación sagrada.</p></div>
-        <div class="tarjeta"><h3>Incienso</h3><p>Paz y armonía.</p></div>
+        <div class="tarjeta"><img src="img/mirra.jpg" alt="Mirra"><h3>Mirra</h3><p>Mística y meditación.</p></div>
+        <div class="tarjeta"><img src="img/copal.jpg" alt="Copal"><h3>Copal</h3><p>Purificación sagrada.</p></div>
+        <div class="tarjeta"><img src="img/incienso.jpg" alt="Incienso"><h3>Incienso</h3><p>Paz y armonía.</p></div>
     </div>
 
     <h3 class="sub-coleccion">Raíces y Tradición</h3>
     <div class="cuadricula">
-        <div class="tarjeta"><h3>Cempasúchil</h3><p>El aroma de la tradición.</p></div>
-        <div class="tarjeta"><h3>Pan de Muerto</h3><p>Dulce recuerdo de hogar.</p></div>
-        <div class="tarjeta"><h3>Dulce de Calabaza</h3><p>Calidez otoñal.</p></div>
+        <div class="tarjeta"><img src="img/cempasuchil.jpg" alt="Cempasúchil"><h3>Cempasúchil</h3><p>Aroma de tradición.</p></div>
+        <div class="tarjeta"><img src="img/pan-muerto.jpg" alt="Pan de Muerto"><h3>Pan de Muerto</h3><p>Recuerdo de hogar.</p></div>
+        <div class="tarjeta"><img src="img/calabaza.jpg" alt="Calabaza"><h3>Dulce de Calabaza</h3><p>Calidez otoñal.</p></div>
     </div>
 
     <h3 class="sub-coleccion">Cabo Baja</h3>
     <div class="cuadricula">
-        <div class="tarjeta"><h3>Aloe Vera</h3><p>Frescura del desierto.</p></div>
-        <div class="tarjeta"><h3>Brisa del Mar</h3><p>El océano en tu hogar.</p></div>
-        <div class="tarjeta"><h3>Pitahaya y Coco</h3><p>Dulzor tropical de BCS.</p></div>
+        <div class="tarjeta"><img src="img/aloe-vela.jpg" alt="Aloe"><h3>Aloe Vera</h3><p>Frescura del desierto.</p></div>
+        <div class="tarjeta"><img src="img/brisa.jpg" alt="Brisa"><h3>Brisa del Mar</h3><p>El océano en casa.</p></div>
+        <div class="tarjeta"><img src="img/pitahaya.jpg" alt="Pitahaya"><h3>Pitahaya y Coco</h3><p>Dulzor tropical.</p></div>
     </div>
 
     <div style="background: white; padding: 40px; border-radius: 25px; margin-top: 80px; border: 2px dashed var(--cafe-maya);">
         <h2 style="text-align:center; color: var(--cafe-maya);">Velas para Eventos</h2>
-        <p style="text-align:center;">Personalizamos etiquetas y aromas para bodas, bautizos y regalos corporativos.</p>
+        <p style="text-align:center;">Hacemos que tus momentos especiales sean inolvidables.</p>
         <div class="cuadricula">
-            <div class="tarjeta"><p>Bodas</p></div>
-            <div class="tarjeta"><p>Bautizos</p></div>
-            <div class="tarjeta"><p>Corporativos</p></div>
+            <div class="tarjeta"><img src="img/boda.jpg" alt="Bodas"><h3>Bodas</h3></div>
+            <div class="tarjeta"><img src="img/bautizo.jpg" alt="Bautizos"><h3>Bautizos</h3></div>
+            <div class="tarjeta"><img src="img/corporativo.jpg" alt="Corporativos"><h3>Corporativos</h3></div>
         </div>
     </div>
 </section>
 
 <section id="ciclos-luz">
     <div class="calculadora-contenedor">
-        <h2 style="color:var(--azul-talavera);">Calcula tu Ciclo de Luz 🕯️</h2>
-        <p>Descubre tu vibración numérica sumando tu fecha de nacimiento.</p>
+        <div class="mezcla-info">
+            <h3 style="color:var(--cafe-maya); margin-top:0;">El Poder de la Mezcla</h3>
+            <p><strong>Aroma:</strong> Dulce de Calabaza & Copal</p>
+            <p style="font-size: 0.9em; text-align: left;"><strong>Copal:</strong> Limpia y purifica tu energía, elevando tus peticiones al cielo.</p>
+            <p style="font-size: 0.9em; text-align: left;"><strong>Calabaza:</strong> Atrae la dulzura de la cosecha y la abundancia a tu nuevo ciclo.</p>
+        </div>
+
+        <h2 style="color:var(--azul-talavera);">Descubre tu Numeración</h2>
+        <p>Ingresa tu fecha de nacimiento:</p>
         <input type="date" id="fechaNacimiento" style="padding:10px; border:1px solid var(--azul-talavera); border-radius:5px;">
         <br>
         <button type="button" onclick="calcularCiclo()" class="btn-luz">Revelar mi Ciclo</button>
         
         <div id="resultadoCiclo" style="display: none;" class="resultado-caja">
             <div class="circulo-numero"><span id="numeroFinal"></span></div>
-            <h4 id="nombreCiclo" style="color:var(--cafe-maya); margin:0;"></h4>
-            <p id="mensajeCiclo" style="font-size:0.9em;"></p>
+            <h4 id="nombreCiclo" style="color:var(--azul-talavera); font-size:1.6rem; margin:10px 0;"></h4>
+            <p id="significadoCiclo" style="font-weight:bold; color:var(--texto-oscuro);"></p>
+            <div id="decretoCiclo" class="decreto-box"></div>
         </div>
     </div>
 </section>
@@ -208,23 +241,23 @@
 <section id="crochet">
     <h2 class="titulo-linea">Tejidos en Crochet</h2>
     <div class="cuadricula">
-        <div class="tarjeta"><h3>Spiderman Amigurumi</h3></div>
-        <div class="tarjeta"><h3>Bolsa de Corazón</h3></div>
-        <div class="tarjeta"><h3>Porta Vasos Flor</h3></div>
+        <div class="tarjeta"><img src="img/spiderman.jpg" alt="Spiderman"><h3>Spiderman Amigurumi</h3></div>
+        <div class="tarjeta"><img src="img/bolsa.jpg" alt="Bolsa"><h3>Bolsa Granny Corazón</h3></div>
+        <div class="tarjeta"><img src="img/portavasos.jpg" alt="Portavasos"><h3>Porta Vasos Flor</h3></div>
     </div>
 </section>
 
 <div id="contacto" class="contacto-bg">
     <h2>Inicia tu Ritual</h2>
     <form action="https://formspree.io/f/xldorrbr" method="POST" style="max-width:500px; margin:auto;">
-        <input type="text" name="Nombre" placeholder="Tu Nombre" required style="width:100%; margin-bottom:10px; padding:10px;">
-        <textarea name="Mensaje" placeholder="¿Cuál es tu pedido?" style="width:100%; margin-bottom:10px; padding:10px;"></textarea>
+        <input type="text" name="Nombre" placeholder="Tu Nombre" required style="width:100%; margin-bottom:10px; padding:10px; border-radius:5px;">
+        <textarea name="Mensaje" placeholder="¿Cuál es tu pedido?" style="width:100%; margin-bottom:10px; padding:10px; border-radius:5px;" rows="4"></textarea>
         <button type="submit">Enviar Mensaje</button>
     </form>
 </div>
 
 <footer>
-    <p>&copy; 2026 Maya Artesanal. BCS, México.</p>
+    <p>&copy; 2026 Maya Artesanal. Hecho con amor en BCS, México.</p>
 </footer>
 
 <script>
@@ -243,19 +276,21 @@ function calcularCiclo() {
     document.getElementById('numeroFinal').innerText = suma;
 
     const guia = {
-        1: ["Nuevos Comienzos", "Liderazgo e independencia."],
-        2: ["Dualidad", "Equilibrio y paciencia."],
-        3: ["Expansión", "Creatividad y alegría."],
-        4: ["Estructura", "Orden y trabajo constante."],
-        5: ["Libertad", "Cambios y nuevas aventuras."],
-        6: ["Armonía", "Amor, familia y hogar."],
-        7: ["Sabiduría", "Espiritualidad e introspección."],
-        8: ["Manifestación", "Éxito y abundancia material."],
-        9: ["Cierre", "Compasión y fin de ciclos."]
+        1: { titulo: "Número 1: El Inicio", significado: "Energía de nuevos comienzos, liderazgo y fuerza para emprender.", decreto: "Hoy inicio mi camino con claridad y determinación." },
+        2: { titulo: "Número 2: El Equilibrio", significado: "Armonía, unión y cooperación. Ideal para fortalecer relaciones.", decreto: "Atraigo paz y equilibrio a mi vida y mi entorno." },
+        3: { titulo: "Número 3: La Expansión", significado: "Creatividad, alegría y comunicación. Perfecto para que tus ideas florezcan.", decreto: "Mi creatividad se expande y mi alegría es infinita." },
+        4: { titulo: "Número 4: La Estabilidad", significado: "Seguridad, orden y bases sólidas para el futuro.", decreto: "Construyo mi vida sobre cimientos firmes y seguros." },
+        5: { titulo: "Número 5: El Cambio", significado: "Libertad, aventura y evolución. Para quienes buscan transformar su vida.", decreto: "Abrazo el cambio con confianza y fluyo con el universo." },
+        6: { titulo: "Número 6: El Amor", significado: "Hogar, sanación y cuidado. Enfocado en la familia y el amor propio.", decreto: "El amor y la armonía llenan cada rincón de mi ser." },
+        7: { titulo: "Número 7: La Intuición", significado: "Sabiduría espiritual, suerte y conexión con lo invisible.", decreto: "Confío en mi guía interior y en la magia del universo." },
+        8: { titulo: "Número 8: La Prosperidad", significado: "Abundancia material, éxito y el flujo infinito de la riqueza.", decreto: "Soy un imán para la abundancia y el éxito." },
+        9: { titulo: "Número 9: La Trascendencia", significado: "Cierre de ciclos, sabiduría y preparación para un nivel superior.", decreto: "Suelto con gratitud lo que ya no necesito y me elevo." }
     };
 
-    document.getElementById('nombreCiclo').innerText = guia[suma][0];
-    document.getElementById('mensajeCiclo').innerText = guia[suma][1];
+    document.getElementById('nombreCiclo').innerText = guia[suma].titulo;
+    document.getElementById('significadoCiclo').innerText = guia[suma].significado;
+    document.getElementById('decretoCiclo').innerText = `Decreto: "${guia[suma].decreto}"`;
+    
     document.getElementById('resultadoCiclo').scrollIntoView({behavior: 'smooth'});
 }
 </script>
