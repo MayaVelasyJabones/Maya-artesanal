@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
     <style>
-   /* Estilo del eslogan (la frase corta) */
-.eslogan {
-    font-style: italic;
-    color: #889e81; /* Un verde suave */
-    font-size: 0.95rem;
-    margin-bottom: 8px;
+  /* Paleta de colores basada en el logo */
+:root {
+    --azul-talavera: #1A4789;
+    --cafe-maya: #A66B44;
+    --beige-fondo: #F9F7F0;
+    --texto-oscuro: #333333;
 }
 
-/* Estilo de la descripción principal */
-.jabon-descripcion {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-    padding: 0 10px;
+/* Títulos de las líneas (Talavera y Botánica) */
+.titulo-linea {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: var(--azul-talavera); /* Azul del logo */
+    margin: 40px 0 20px 0;
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--cafe-maya); /* Línea café debajo */
+    display: block;
+    padding-bottom: 10px;
+}
+
+/* Tarjeta del jabón */
+.jabon-card {
+    background-color: white; /* Blanco limpio para resaltar */
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(26, 71, 137, 0.1); /* Sombra sutil azulada */
+    transition: transform 0.3s ease;
+}
+
+/* Título del Jabón */
+.jabon-card h3 {
+    color: var(--cafe-maya); /* Café de la palabra Maya */
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+/* Eslogan (Frase corta) */
+.eslogan {
+    font-style: italic;
+    color: var(--azul-talavera); /* Azul para resaltar la frescura */
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
-/* Estilo del texto "Ideal para" */
+/* Descripción */
+.jabon-descripcion {
+    font-size: 0.95rem;
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Recuadro "Ideal para" */
 .ideal-para {
     font-size: 0.85rem;
-    background-color: #f9f9f9; /* Un fondo muy sutil para resaltarlo */
-    padding: 5px;
-    border-radius: 4px;
-    color: #444;
+    background-color: var(--beige-fondo); /* Fondo cremita del logo */
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--cafe-maya);
+    border: 1px dashed var(--cafe-maya);
 }
 
-/* Asegurar que todas las tarjetas tengan el mismo tamaño */
-.jabon-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* Separador entre secciones */
+.separador {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--azul-talavera), transparent);
+    margin: 60px 0;
 }
-    .eslogan {
-        font-style: italic;
-        color: #889e81;
-        font-size: 0.95rem;
-        margin-bottom: 8px;
-    }
-
-    .jabon-descripcion {
-        font-size: 0.9rem;
-        color: #555;
-        line-height: 1.5;
-        padding: 0 10px;
-        margin-bottom: 10px;
-    }
-
-    .ideal-para {
-        font-size: 0.85rem;
-        background-color: #f9f9f9;
-        padding: 5px;
-        border-radius: 4px;
-        color: #444;
-    }
-</style>
+        </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
