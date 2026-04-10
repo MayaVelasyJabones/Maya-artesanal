@@ -225,7 +225,59 @@
 
         footer { text-align: center; padding: 40px; background: var(--fondo); }
     </style>
-</head>
+</head
+    <script>
+function calcularCiclo() {
+    const inputFecha = document.getElementById('fechaNacimiento').value;
+    
+    if (!inputFecha) {
+        alert("Por favor, ingresa una fecha válida.");
+        return;
+    }
+
+    // Obtenemos todos los dígitos de la fecha (ej: 1995-05-15 -> 19950515)
+    let digitos = inputFecha.replace(/-/g, '');
+    let suma = 0;
+
+    // Primera suma de todos los números
+    for (let d of digitos) {
+        suma += parseInt(d);
+    }
+
+    // Reducción a un solo dígito (mientras sea mayor a 9, se vuelve a sumar)
+    while (suma > 9) {
+        suma = suma.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }
+
+    // Mostrar resultados y asignar mensajes
+    const caja = document.getElementById('resultadoCiclo');
+    const spanNumero = document.getElementById('numeroFinal');
+    const pMensaje = document.getElementById('mensajeCiclo');
+    const hNombre = document.getElementById('nombreCiclo');
+
+    caja.style.display = 'block';
+    spanNumero.innerText = suma;
+
+    // Contenido basado en tus ciclos
+    const guiaCiclos = {
+        1: { nombre: "Ciclo de Nuevos Comienzos", texto: "Es momento de la independencia y de sembrar proyectos con fuerza propia." },
+        2: { nombre: "Ciclo de Dualidad y Empatía", texto: "Tiempo de trabajar la paciencia, las relaciones y el equilibrio emocional." },
+        3: { nombre: "Ciclo de Expansión Creativa", texto: "La comunicación y la alegría fluyen. Expresa tu verdad sin miedo." },
+        4: { nombre: "Ciclo de Estructura", texto: "Enfoque en el orden, el trabajo constante y la construcción de bases sólidas." },
+        5: { nombre: "Ciclo de Libertad", texto: "Cambios inesperados y aventuras. Fluye con el movimiento de la vida." },
+        6: { nombre: "Ciclo de Armonía Social", texto: "Ideal para el cuidado del hogar, la familia y la responsabilidad amorosa." },
+        7: { nombre: "Ciclo de Sabiduría", texto: "Un tiempo de introspección, estudio y conexión espiritual profunda." },
+        8: { nombre: "Ciclo de Manifestación", texto: "Poder personal y resultados materiales. Cosecha lo que has trabajado." },
+        9: { nombre: "Ciclo de Cierre", texto: "Culminación y perdón. Limpia tu espacio para recibir el próximo gran ciclo." }
+    };
+
+    hNombre.innerText = guiaCiclos[suma].nombre;
+    pMensaje.innerText = guiaCiclos[suma].texto;
+    
+    // Desplazar la pantalla suavemente hacia el resultado
+    caja.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 <body>
 
 <nav>
@@ -370,20 +422,26 @@
         </div>
     </div>
 
-    <div id="numerologia" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); padding: 60px 40px; border-radius: 30px; margin-top: 60px; border: 1px solid var(--azul); box-shadow: 0 10px 25px rgba(26, 58, 138, 0.08); position: relative; overflow: hidden;">
-    
-    <h3 style="text-align:center; color: var(--azul); font-family: 'Bitter', serif; font-size: 2.2em; margin-top: 0;">Colección: Ciclo de Luz</h3>
-    <p style="text-align:center; font-family: 'Bitter', serif; color: var(--terracota); font-weight: bold; letter-spacing: 3px; font-size: 1.1em;">NUMEROLOGÍA E INTENCIÓN</p>
-    
-    <div style="max-width: 400px; margin: 0 auto 30px;">
-        <div class="tarjeta" style="border: 2px solid var(--azul); background: white;">
-            <img src="img/ciclo-luz-principal.png" alt="Vela Ciclo de Luz" style="width: 100%; height: auto; display: block;">
-            <div style="padding: 15px;">
-                <h4 style="color: var(--azul); margin: 0;">Aroma Combinado</h4>
-                <p style="font-size: 0.9em; color: var(--terracota); font-weight: bold;">Copal Sagrado & Dulce de Calabaza</p>
+   <section id="ciclos-luz" class="seccion-interactiva">
+    <div class="calculadora-contenedor">
+        <h2 class="titulo-linea">Encuentra tu Número de Ciclo 🕯️</h2>
+        <p class="instrucciones">Suma tu día, mes y año de nacimiento para descubrir tu energía actual.</p>
+        
+        <div class="formulario-ciclo">
+            <label for="fechaNacimiento">Selecciona tu fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento">
+            <button onclick="calcularCiclo()" class="btn-luz">Revelar mi Ciclo</button>
+        </div>
+
+        <div id="resultadoCiclo" class="resultado-caja" style="display: none;">
+            <div class="circulo-numero">
+                <span id="numeroFinal"></span>
             </div>
+            <h4 id="nombreCiclo"></h4>
+            <p id="mensajeCiclo"></p>
         </div>
     </div>
+</section>
 
     <div style="max-width: 750px; margin: 30px auto; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 30px;">
         <p style="line-height: 1.8; font-size: 1.1em;">
