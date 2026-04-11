@@ -170,6 +170,48 @@
     .contacto-bg { background: var(--azul-talavera); color: white; padding: 80px 20px; text-align: center; }
     button[type="submit"] { background: var(--cafe-maya); color: white; padding: 18px; border: none; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
     footer { text-align: center; padding: 40px; }
+        /* Reducimos el relleno del Header */
+header { 
+    text-align: center; 
+    padding: 20px 20px 10px; /* Reducido de 60px a 20px arriba */
+}
+
+/* Reducimos el espacio entre el logo y los nombres */
+.logo-img { 
+    max-width: 220px; /* Bajamos un poco el tamaño para que no ocupe tanto alto */
+    margin-bottom: 5px; 
+}
+
+/* Ajustamos los márgenes de los nombres */
+.nombre-maya { 
+    font-size: 3.5em; /* Un poco más pequeño ayuda a compactar */
+    margin: 0; 
+}
+
+.nombre-artesanal { 
+    font-size: 1.8em; 
+    margin: -10px 0 10px; /* Margen negativo para acercarlo a 'Maya' */
+}
+
+/* Reducimos el espacio de las secciones */
+section { 
+    max-width: 1100px; 
+    margin: 20px auto; /* Reducido de 60px a 20px arriba y abajo */
+    padding: 0 20px; 
+}
+
+/* Reducimos el espacio del texto introductorio */
+.intro-texto {
+    max-width: 700px;
+    margin: 0 auto 20px; /* Reducimos el margen inferior */
+    line-height: 1.4; /* Un poco más apretado el texto */
+}
+
+/* Reducimos el espacio de los títulos de línea */
+.titulo-linea { 
+    margin: 20px 0 15px; /* Menos espacio arriba y abajo del título */
+    font-size: 1.8rem; 
+}
 </style>
 </head>
 
@@ -183,13 +225,31 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
-<header>
-    <img src="img/lg1.jpeg" alt="Logo Maya Artesanal" class="logo-img">
-    <h1 class="nombre-maya">Maya</h1>
-    <h1 class="nombre-artesanal">Artesanal</h1>
-    <div class="intro-texto" style="margin: auto; max-width: 700px;">
-        Cultura y bienestar en cada barra. 🌵🌊 Fusionamos la tradición de la Talavera con la esencia de BCS.
-    </div>
+nav {
+    background: var(--blanco);
+    padding: 10px; /* Reducido de 15px a 10px */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header { 
+    text-align: center; 
+    padding: 10px 20px 5px; /* Espacio mínimo arriba y abajo */
+}
+
+.logo-img { 
+    max-width: 200px; /* Un tamaño un poco más contenido ayuda a la verticalidad */
+    margin: 5px 0; 
+}
+
+.intro-texto {
+    max-width: 650px;
+    margin: 5px auto 15px; /* Pegamos el texto al título */
+    font-size: 1rem;
+    line-height: 1.4;
+}
 </header>
 
 <section id="jabones">
